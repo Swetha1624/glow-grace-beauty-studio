@@ -4,86 +4,268 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    color: #3d3033;
+    background: #fffaf9;
 }
 
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+========================= */
 
-header {
+.header {
+    position: absolute;
     width: 100%;
-    background: white;
-    padding: 20px 8%;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-nav {
+.navbar {
+    width: 84%;
+    margin: auto;
+    padding: 28px 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    text-decoration: none;
+    color: #3d3033;
+
+    font-family: 'DM Serif Display', serif;
+    font-size: 27px;
+}
+
+.logo span {
+    font-style: italic;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #3d3033;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
 }
 
 
-/* Hero Section */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
 
     display: flex;
     align-items: center;
 
-    padding: 60px 8%;
-    
-    background: #f8e9e9;
+    padding: 120px 8% 80px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #f8e8e7;
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
 }
 
 .subtitle {
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
+    font-size: 12px;
+    letter-spacing: 4px;
 
-h1 {
-    font-size: 64px;
-    line-height: 1.1;
     margin-bottom: 25px;
+
+    font-weight: 600;
 }
 
-.hero-text {
-    font-size: 18px;
-    line-height: 1.7;
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
     margin-bottom: 30px;
 }
 
-.button {
-    display: inline-block;
+.hero h1 em {
+    font-style: italic;
+}
 
-    padding: 14px 28px;
+.hero-description {
+    max-width: 520px;
 
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+    color: #66585b;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+
+    align-items: center;
+}
+
+.primary-btn,
+.secondary-btn {
     text-decoration: none;
 
-    background: #333;
-    color: white;
+    padding: 15px 26px;
 
-    border-radius: 5px;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #3d3033;
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    color: #3d3033;
+    border-bottom: 1px solid #3d3033;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.hero-decoration {
+    position: absolute;
+
+    right: 8%;
+    top: 22%;
+
+    width: 420px;
+    height: 420px;
+}
+
+.circle {
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: #ead1d0;
+}
+
+.flower {
+    position: absolute;
+
+    bottom: 20px;
+    left: -30px;
+
+    font-size: 100px;
+
+    transform: rotate(-20deg);
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: #fffaf9;
+}
+
+.intro p {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        width: 90%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 130px 8% 80px;
+    }
+
+    .hero-decoration {
+        opacity: 0.35;
+
+        right: -180px;
+        top: 30%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro h2 {
+        font-size: 34px;
+    }
 }
