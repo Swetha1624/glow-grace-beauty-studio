@@ -1,152 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Glow & Grace Beauty Studio</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow &amp; Grace Beauty Studio</title>
+<meta name="description" content="Bridal makeup, party glam, hair styling and more — booked online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="navbar">
+<div class="grain"></div>
 
-            <a href="#home" class="logo">
-                Glow <span>&</span> Grace
-            </a>
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark">Glow &amp; Grace</span>
+      <span class="logo-sub">beauty studio</span>
+    </a>
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-        </nav>
-    </header>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#testimonials" class="nav-link">Stories</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#book" class="nav-link nav-cta">Book appointment</a>
+    </nav>
+  </div>
+</header>
 
+<main>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <p class="subtitle">
-                BEAUTY • ELEGANCE • CONFIDENCE
-            </p>
-
-            <h1>
-                Where Beauty<br>
-                Meets <em>Elegance.</em>
-            </h1>
-
-            <p class="hero-description">
-                Professional makeup, hairstyling and beauty services
-                crafted to make your special moments unforgettable.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#contact" class="primary-btn">
-                    Book an Appointment
-                </a>
-
-                <a href="#services" class="secondary-btn">
-                    Explore Services →
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="hero-decoration">
-            <div class="circle"></div>
-            <div class="flower">✿</div>
-        </div>
-
-    </section>
-<!-- About Section -->
-<section id="about" class="about">
-
-    <div class="about-image">
-        <img 
-            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
-            alt="Beauty studio makeup">
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="hero-kicker">Bridal &amp; editorial makeup studio</p>
+      <h1 class="hero-title">Where beauty<br><em>meets elegance.</em></h1>
+      <p class="hero-copy">Bridal artistry, editorial glam and everyday glow, crafted by hand and tailored to the face in front of us — not a trend, not a template.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-fill">Book an appointment</a>
+        <a href="#services" class="btn btn-outline">Explore services</a>
+      </div>
     </div>
 
-    <div class="about-content">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 560" class="hero-svg">
+        <circle cx="300" cy="230" r="170" class="art-circle"/>
+        <ellipse cx="300" cy="230" rx="120" ry="150" class="art-mirror"/>
+        <path d="M300 60 L300 20 M260 40 L340 40" class="art-line"/>
+        <path class="art-branch" d="M120 460 C 160 380, 140 300, 200 260 C 250 230, 260 180, 240 120"/>
+        <circle cx="240" cy="120" r="10" class="art-dot"/>
+        <circle cx="205" cy="175" r="7" class="art-dot"/>
+        <circle cx="175" cy="240" r="9" class="art-dot"/>
+        <path class="art-branch" d="M150 470 C 190 430, 170 360, 230 330"/>
+        <path d="M230 330 C 245 320, 260 322, 268 336" class="art-leaf"/>
+        <path d="M200 400 C 215 392, 228 396, 234 408" class="art-leaf"/>
+        <path d="M400 430 C 360 380, 375 320, 330 290" class="art-branch"/>
+        <path d="M330 290 C 316 280, 302 283, 296 296" class="art-leaf"/>
+      </svg>
+    </div>
+  </section>
 
-        <p class="section-label">ABOUT GLOW & GRACE</p>
+  <p class="intro-line">Enhancing your natural beauty, one appointment at a time.</p>
 
-        <h2>
-            Beauty is not about
-            <em>perfection.</em>
-        </h2>
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about-art" aria-hidden="true">
+      <svg viewBox="0 0 400 480" class="about-svg">
+        <path d="M200 40 C 120 40, 80 110, 90 190 C 96 240, 120 260, 120 300 C 120 370, 150 430, 200 440 C 250 430, 280 370, 280 300 C 280 260, 304 240, 310 190 C 320 110, 280 40, 200 40 Z" class="silhouette"/>
+        <path d="M140 150 C 160 110, 240 110, 260 150" class="fine-line"/>
+        <circle cx="200" cy="230" r="3" class="art-dot"/>
+      </svg>
+    </div>
+    <div class="about-text">
+      <h2 class="section-title">A studio built<br>around your face</h2>
+      <p class="about-copy">Glow &amp; Grace was started by a small team of makeup artists who were tired of one-look-fits-all beauty counters. We work with premium, skin-safe products, and every booking begins with a real conversation about what <em>you</em> want to look like — not what's trending this week.</p>
+      <ul class="about-list">
+        <li>Professional artists trained across bridal, editorial and everyday looks</li>
+        <li>Quality, skin-safe products from studio-grade brands</li>
+        <li>Personalised consultations before every service</li>
+      </ul>
+      <a href="#services" class="text-link">Discover our services</a>
+    </div>
+  </section>
 
-        <p class="about-text">
-            At Glow & Grace Beauty Studio, we believe every woman
-            deserves to feel confident, beautiful and completely
-            herself.
-        </p>
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <h2 class="section-title center">Services</h2>
+    <p class="section-lede center">Six ways to look like the best version of yourself. Every service starts with a five-minute skin and style check.</p>
 
-        <p class="about-text">
-            From elegant bridal looks to effortless everyday beauty,
-            our professional artists create personalized styles
-            designed especially for you.
-        </p>
+    <div class="service-list">
 
-        <div class="about-features">
-
-            <div class="feature">
-                <span>✓</span>
-                <p>Professional Artists</p>
-            </div>
-
-            <div class="feature">
-                <span>✓</span>
-                <p>Premium Beauty Products</p>
-            </div>
-
-            <div class="feature">
-                <span>✓</span>
-                <p>Personalized Beauty Looks</p>
-            </div>
-
+      <div class="service-row" data-service="Bridal Makeup">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 6 C15 6 9 14 9 22c0 9 6 16 15 20 9-4 15-11 15-20 0-8-6-16-15-16Z"/><path d="M24 14v14M17 24l14 0" /></svg>
         </div>
+        <div class="service-body">
+          <h3>Bridal Makeup</h3>
+          <p>Complete bridal makeup and styling — from skin prep to the final pin of your dupatta.</p>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Starting ₹8,999</span>
+          <a href="#book" class="btn btn-small">Book now</a>
+        </div>
+      </div>
 
-        <a href="#services" class="about-btn">
-            Discover Our Services →
-        </a>
+      <div class="service-row" data-service="Party Makeup">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 44c8-4 14-12 14-22a14 14 0 0 0-28 0c0 10 6 18 14 22Z"/><circle cx="24" cy="20" r="4"/></svg>
+        </div>
+        <div class="service-body">
+          <h3>Party Makeup</h3>
+          <p>Sharp, luminous makeup built to hold up — and photograph beautifully — all night.</p>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Starting ₹2,499</span>
+          <a href="#book" class="btn btn-small">Book now</a>
+        </div>
+      </div>
+
+      <div class="service-row" data-service="Hair Styling">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M10 40c2-14 4-26 14-30 10-4 16 4 14 12-2 8-10 8-10 16" /><path d="M14 20c4-2 8-2 10 2"/></svg>
+        </div>
+        <div class="service-body">
+          <h3>Hair Styling</h3>
+          <p>Modern waves, classic sets and traditional styles, shaped for your outfit and your day.</p>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Starting ₹1,499</span>
+          <a href="#book" class="btn btn-small">Book now</a>
+        </div>
+      </div>
+
+      <div class="service-row" data-service="Saree Draping">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M14 8c0 12-6 18-6 28 0 6 4 8 16 8s16-2 16-8c0-10-6-16-6-28"/><path d="M14 8h20M18 16h12M20 24h8"/></svg>
+        </div>
+        <div class="service-body">
+          <h3>Saree Draping</h3>
+          <p>Pleats and pallu, draped the way you actually want to wear them through the day.</p>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Starting ₹999</span>
+          <a href="#book" class="btn btn-small">Book now</a>
+        </div>
+      </div>
+
+      <div class="service-row" data-service="Skin &amp; Glow">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 10v4M24 34v4M10 24h4M34 24h4M15 15l3 3M33 33l-3-3M15 33l3-3M33 15l-3 3"/></svg>
+        </div>
+        <div class="service-body">
+          <h3>Skin &amp; Glow</h3>
+          <p>Facials and prep treatments that let your skin lead the look, makeup or not.</p>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Starting ₹1,999</span>
+          <a href="#book" class="btn btn-small">Book now</a>
+        </div>
+      </div>
+
+      <div class="service-row" data-service="Makeup Consultation">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M10 30c0-10 6-18 14-18s14 8 14 18"/><path d="M12 30h24v4c0 4-4 6-12 6s-12-2-12-6v-4Z"/></svg>
+        </div>
+        <div class="service-body">
+          <h3>Makeup Consultation</h3>
+          <p>A one-on-one session to plan your look, products and timeline before the big day.</p>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Starting ₹499</span>
+          <a href="#book" class="btn btn-small">Book now</a>
+        </div>
+      </div>
 
     </div>
+  </section>
 
-</section>
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why">
+    <h2 class="section-title center">Why clients choose us</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="why-num">01</span>
+        <h3>Experienced artists</h3>
+        <p>Professional artists who understand different skin tones, features and beauty styles.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">02</span>
+        <h3>Premium products</h3>
+        <p>Quality, skin-safe beauty products chosen for a flawless, long-wearing finish.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">03</span>
+        <h3>Personalised looks</h3>
+        <p>Every look is designed around your preferences, your outfit and your occasion.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">04</span>
+        <h3>Hygiene &amp; care</h3>
+        <p>A clean, comfortable and professional experience at every single appointment.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Small introduction -->
-    <section class="intro">
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery" id="gallery">
+    <h2 class="section-title center">Gallery</h2>
+    <p class="section-lede center">A look at recent work — click any tile for a closer look.</p>
 
-        <p>
-            BEAUTY • STYLE • SELF-LOVE
-        </p>
+    <div class="mosaic">
+      <button class="tile tile-big" data-caption="Bridal makeup — full bridal look with traditional draping." style="--tint-a:#8B3A3A; --tint-b:#C97E7E;">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c-9 0-15 8-15 16 0 9 6 16 15 20 9-4 15-11 15-20 0-8-6-16-15-16Z"/></svg>
+        <span>Bridal makeup</span>
+      </button>
+      <button class="tile" data-caption="Party glam — sharp, luminous makeup for evening events." style="--tint-a:#AD8A52; --tint-b:#E4C99A;">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="20" r="14"/><path d="M24 34v8"/></svg>
+        <span>Party glam</span>
+      </button>
+      <button class="tile" data-caption="Hairstyling — modern waves and traditional sets." style="--tint-a:#5C4A3F; --tint-b:#A98B76;">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 40c2-14 4-26 14-30 10-4 16 4 14 12-2 8-10 8-10 16"/></svg>
+        <span>Hairstyling</span>
+      </button>
+      <button class="tile" data-caption="Saree draping — pleats and pallu, styled to last the day." style="--tint-a:#7A5C61; --tint-b:#D8B7BC;">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 8c0 12-6 18-6 28 0 6 4 8 16 8s16-2 16-8c0-10-6-16-6-28"/></svg>
+        <span>Saree draping</span>
+      </button>
+      <button class="tile tile-wide" data-caption="Before &amp; after — the same face, transformed with care." style="--tint-a:#3A2E28; --tint-b:#8B3A3A;">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="24" r="10"/><circle cx="32" cy="24" r="10"/><path d="M24 24h2"/></svg>
+        <span>Before &amp; after</span>
+      </button>
+      <button class="tile" data-caption="Studio vibes — where every appointment begins." style="--tint-a:#AD8A52; --tint-b:#8B3A3A;">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="10" width="28" height="28" rx="2"/><path d="M10 24h28M24 10v28"/></svg>
+        <span>Studio vibes</span>
+      </button>
+    </div>
+  </section>
 
-        <h2>
-            Enhancing your natural beauty,<br>
-            one look at a time.
-        </h2>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" id="testimonials">
+    <h2 class="section-title center">Stories from our clients</h2>
 
-    </section>
+    <div class="quote-track" id="quoteTrack">
+      <article class="quote-card">
+        <span class="quote-mark" aria-hidden="true">&#8220;</span>
+        <p class="quote-text">Absolutely loved my bridal look. The team understood exactly what I wanted before I could even explain it properly.</p>
+        <p class="quote-name">Priya <span>— Bridal client</span></p>
+      </article>
+      <article class="quote-card">
+        <span class="quote-mark" aria-hidden="true">&#8220;</span>
+        <p class="quote-text">My party makeup lasted through a six-hour event and still looked fresh in every photo. Genuinely impressed.</p>
+        <p class="quote-name">Meera <span>— Party client</span></p>
+      </article>
+      <article class="quote-card">
+        <span class="quote-mark" aria-hidden="true">&#8220;</span>
+        <p class="quote-text">The hairstyling was exactly the balance of modern and traditional I was hoping for. Booking was easy too.</p>
+        <p class="quote-name">Ananya <span>— Styling client</span></p>
+      </article>
+      <article class="quote-card">
+        <span class="quote-mark" aria-hidden="true">&#8220;</span>
+        <p class="quote-text">The skin consultation alone was worth it. They were honest about what my skin needed instead of upselling me.</p>
+        <p class="quote-name">Kavya <span>— Skin &amp; Glow client</span></p>
+      </article>
+    </div>
 
+    <div class="quote-nav">
+      <button id="quotePrev" aria-label="Previous story">&#8592;</button>
+      <button id="quoteNext" aria-label="Next story">&#8594;</button>
+    </div>
+  </section>
 
+  <!-- ===== BOOKING ===== -->
+  <section class="book" id="book">
+    <div class="book-form-wrap">
+      <h2 class="section-title">Book an appointment</h2>
+      <p class="section-lede">Tell us a little about what you need — we'll confirm your slot over phone or WhatsApp.</p>
+
+      <form id="bookingForm" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <span class="field-error" id="err-name"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="98765 43210" required>
+            <span class="field-error" id="err-phone"></span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="field-error" id="err-email"></span>
+          </div>
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Bridal Makeup</option>
+              <option>Party Makeup</option>
+              <option>Hair Styling</option>
+              <option>Saree Draping</option>
+              <option>Skin &amp; Glow</option>
+              <option>Makeup Consultation</option>
+            </select>
+            <span class="field-error" id="err-service"></span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="date">Preferred date</label>
+            <input type="date" id="date" name="date" required>
+            <span class="field-error" id="err-date"></span>
+          </div>
+          <div class="field">
+            <label for="time">Preferred time</label>
+            <input type="time" id="time" name="time" required>
+            <span class="field-error" id="err-time"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Requirements <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Occasion, outfit colour, anything you'd like us to know"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-fill btn-wide">Book appointment</button>
+
+        <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside class="book-side">
+      <h3>Studio hours</h3>
+      <ul class="hours-list">
+        <li><span>Mon – Fri</span><span>10:00 am – 7:00 pm</span></li>
+        <li><span>Saturday</span><span>9:00 am – 8:00 pm</span></li>
+        <li><span>Sunday</span><span>By appointment</span></li>
+      </ul>
+      <p class="book-note">Bridal bookings are best made at least 3 weeks in advance so we can plan a trial session.</p>
+      <a href="#" class="text-link whatsapp-link" id="asideWhatsapp">Or message us directly on WhatsApp</a>
+    </aside>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <h2 class="section-title center">Visit or reach us</h2>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-3-8-8-8Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p>123, Beauty Lane<br>Your City, 500001</p>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5c0 8 7 15 15 15l2-4-6-2-2 2c-2-1-4-3-5-5l2-2-2-6-4 2Z"/></svg>
+        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <p><a href="mailto:hello@glowandgrace.studio">hello@glowandgrace.studio</a></p>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/></svg>
+        <p><a href="https://instagram.com" target="_blank" rel="noopener">@glowandgrace.studio</a></p>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg>
+        <p>Mon–Sat, 10am – 7pm</p>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        title="Studio location map"
+        src="https://www.google.com/maps?q=Beauty%20Studio&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">Glow &amp; Grace</span>
+      <p>Where beauty meets elegance.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+      <a href="#" id="footerWhatsapp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 9.5c0 4 3 7 7 7l1-2-2.5-1-1 1a6 6 0 0 1-3.5-3.5l1-1-1-2.5-2 1Z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; <span id="year"></span> Glow &amp; Grace Beauty Studio. All rights reserved.</p>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="#" class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 9.5c0 4 3 7 7 7l1-2-2.5-1-1 1a6 6 0 0 1-3.5-3.5l1-1-1-2.5-2 1Z"/></svg>
+</a>
+
+<!-- ===== GALLERY LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <p id="lightboxCaption"></p>
+    <button id="lightboxClose" aria-label="Close">&times;</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
