@@ -4,7 +4,7 @@
 
 // ---- CONFIG: replace with the real studio WhatsApp number ----
 // Format: country code + number, no plus sign, no spaces (e.g. "919876543210")
-const WHATSAPP_NUMBER = "919876543210";
+const WHATSAPP_NUMBER = "919550119490";
 
 document.addEventListener("DOMContentLoaded", () => {
   setYear();
