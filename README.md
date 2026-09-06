@@ -34,7 +34,7 @@ This project was created as a professional business website concept for a beauty
 ![Home Page](Home_page.png)
 
 ### Services Page
-![Services Page](Sevices_page.png)
+![Services Page](Services_page.png)
 
 ### Contact Page
 ![Contact Page](Contact_page.png)
