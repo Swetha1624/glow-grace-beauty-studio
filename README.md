@@ -28,6 +28,16 @@ A modern and responsive beauty studio website designed for a professional makeup
 ## Project Purpose
 
 This project was created as a professional business website concept for a beauty studio. It focuses on attractive UI design, responsive layouts, and user-friendly navigation.
+## Screenshots
+
+### Home Page
+![Home Page](Home_page.png)
+
+### Services Page
+![Services Page](Sevices_page.png)
+
+### Contact Page
+![Contact Page](Contact_page.png)
 
 ## Author
 
